@@ -17,7 +17,7 @@ import io.flutter.plugin.common.PluginRegistry.Registrar
 import com.google.gson.Gson; 
 import com.google.gson.annotations.SerializedName
 
-class PaystackPosFlutterPlugin: FlutterPlugin, MethodCallHandler {
+class PaystackPosFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware, PluginRegistry.ActivityResultListener {
   private lateinit var channel : MethodChannel
 
   val TXN_RESULT_CODE = 14

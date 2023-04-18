@@ -1,6 +1,6 @@
 name: paystack_pos_flutter
 description: A Flutter plugin that communicates with the Paystack terminal app to make payments.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/faetysal/paystack_pos_flutter
 
 environment:

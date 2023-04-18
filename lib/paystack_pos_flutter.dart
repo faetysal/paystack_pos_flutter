@@ -1,8 +1,12 @@
 
-import 'paystack_pos_flutter_platform_interface.dart';
+import 'package:flutter/services.dart';
 
 class PaystackPosFlutter {
-  Future<String?> getPlatformVersion() {
-    return PaystackPosFlutterPlatform.instance.getPlatformVersion();
+  static const MethodChannel _channel = MethodChannel('demo_plugin');
+  static Future<String> initPayment(int amount) async {
+    final String result = await _channel.invokeMethod('initPayment', {
+      'amount': amount
+    });
+    return result;
   }
 }

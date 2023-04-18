@@ -31,6 +31,7 @@ class PaystackPosFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware,
   }
 
   override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
+    this.result = result
     if (call.method == "initPayment") {
       makePayment(call.argument("amount")!!)
     } else {
